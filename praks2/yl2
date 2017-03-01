@@ -2,8 +2,8 @@
 # Sander Ehamaa
 # Ajaväljastuse skript
 
-date +"%k:%M" #kellaaeg
+date +"Kell: %k:%M" #kellaaeg
 
-date +"%d.%m.%Y"
+date +"Kuupäev: %d.%m.%Y"
 
 date +"Today is %A"
