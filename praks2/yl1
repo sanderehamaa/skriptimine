@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# Autor: Sander Ehamaa
+# See on esimene skript aine raames - tervitab kasutajat
+
+echo "Tere User!"
