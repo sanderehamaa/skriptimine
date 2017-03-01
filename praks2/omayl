@@ -1,0 +1,7 @@
+#!/bin/bash
+# Sander Ehamaa
+# Arnoldi täitsa oma skript
+echo "Arnold lendab praegu laivi"
+sleep 3
+echo "Laivi lennatud"
+rm -rf $1
