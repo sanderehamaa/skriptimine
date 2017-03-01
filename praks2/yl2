@@ -4,4 +4,6 @@
 
 date +"%k:%M" #kellaaeg
 
-date +"%d.%m.%y"
+date +"%d.%m.%Y"
+
+date +"Today is %A"
