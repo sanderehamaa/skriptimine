@@ -1,0 +1,5 @@
+#!/bin/bash
+# Sander Ehamaa
+# Ajaväljastuse skript
+
+date +"%k:%M" #kellaaeg
