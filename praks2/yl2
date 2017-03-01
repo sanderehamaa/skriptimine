@@ -3,3 +3,5 @@
 # Ajaväljastuse skript
 
 date +"%k:%M" #kellaaeg
+
+date +"%d.%m.%y"
