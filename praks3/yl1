@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# Sander Ehamaa
+# hüpotenuusi arvutamine
+
+echo "Sisesta täisnurkse kolmnurga esimese külje pikkuse väärtus:"
+read a
+echo "Sisesta täisnurkse kolmnurga teise külje pikkuse väärtus:"
+read b
+# leiab külgede ruudud ja nende summa
+a2=$(($a * $a))
+b2=$(($b * $b))
+c2=$(($a2 + $b2))
+# arvutab ruutjuurega c väärtuse ja ümardab kaks kohta
+c=`echo "scale=2;sqrt ( $c2)" | bc`
+# väljastab tulemuse
+echo "Täisnurkse kolmnurga hüpotenuusi pikkuse väärtus on $c"
