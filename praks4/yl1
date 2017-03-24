@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# Sander Ehamaa
+# Loob skripti malli, kasutades parameetrina edastatud nime failinimena, annab mallile käivitamisõigused
+
+# kontrollib parameetri olemasolu
+if [ -z "$1" ]
+	then
+	echo "Skript ebaõnnestus. Lisa skripti järele parameeter faili nimega, mida soovid luua."
+	exit
+else
+	fail=$(echo "$1" | sed 's/[\+\{\;\"\\\=\?~\(\)\<\>\&\*\|\$\@]//g')
+	# kontrollib, kas parameetris on ebasobivaid sümboleid
+	if [ "$1" = "$fail" ]
+	then
+		echo "Failinimi sobib. Jätkan."
+	else
+		echo "Failinimes oli ebasobivaid sümboleid. Proovi uuesti."
+		exit
+	fi
+	# kontrollib, kas samanimeline fail on juba olemas
+	if [ ! -f "$1" ]
+	then
+	touch $1
+	echo -e "#!/bin/bash\n#\n#" > $1
+	chmod +x $1
+	echo "Fail on loodud nimega $1."
+	else
+	echo "Selle nimega fail on juba olemas. Proovi uuesti teise nimega."
+	exit
+	fi
+fi
